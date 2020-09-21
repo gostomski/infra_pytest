@@ -2,3 +2,4 @@ boto
 boto3
 pytest
 pytest-variables
+pyyaml
