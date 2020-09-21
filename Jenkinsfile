@@ -12,7 +12,6 @@ pipeline {
         stage('Test') {
             steps {
                 withEnv(["HOME=${env.WORKSPACE}"]) {
-                    sh 'pip install pytest'
                     sh 'python -m pytest --variables variabes.yaml test_cf_ota.py'
                 }
         }
