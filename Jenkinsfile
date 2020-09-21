@@ -5,13 +5,15 @@ pipeline {
         stage('Build environment') {
             steps {
                 withEnv(["HOME=${env.WORKSPACE}"]) {
-                  sh 'python3 -m pip install -r requirements.txt --user'
+                    sh 'python3 -m pip install -r requirements.txt --user'
                 }
             }
         }       
         stage('Test') {
             steps {
-                sh 'python -m pytest  --variables variabes.yaml test_cf_ota.py'
+                withEnv(["HOME=${env.WORKSPACE}"]) {
+                    sh 'python -m pytest  --variables variabes.yaml test_cf_ota.py'
+                }
         }
       }
    }
