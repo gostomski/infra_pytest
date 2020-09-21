@@ -4,7 +4,7 @@ pipeline {
    stages {
         stage('Build environment') {
             steps {
-                sh 'pip --no-cache-dir install -r requirements.txt --user'
+                sh 'python3 -m pip install -r requirements.txt --user'
             }
         }       
         stage('Test') {
