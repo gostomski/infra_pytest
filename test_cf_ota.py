@@ -5,7 +5,7 @@ import time
 import requests
 import os
 
-#import pytest
+import pytest
 
 import logging
 import boto3

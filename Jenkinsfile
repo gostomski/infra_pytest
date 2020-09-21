@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 withEnv(["HOME=${env.WORKSPACE}"]) {
-                    sh 'python -m pytest  --variables variabes.yaml test_cf_ota.py'
+                    sh 'pytest --variables variabes.yaml test_cf_ota.py'
                 }
         }
       }
