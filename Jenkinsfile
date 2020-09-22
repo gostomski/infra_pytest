@@ -12,7 +12,9 @@ pipeline {
         stage('Test') {
             steps {
                 withEnv(["HOME=${env.WORKSPACE}"]) {
-                    sh 'python -m pytest --variables variabes.yaml test_cf_ota.py'
+                  withAWS(credentials: 'aws-credentials', region: 'us-east-1') {
+                     sh 'python -m pytest --variables variabes.yaml test_cf_ota.py'
+                 }
                 }
         }
       }

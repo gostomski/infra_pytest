@@ -47,7 +47,7 @@ class TestClass:
         f = open("%s.txt" % self.file_name, "a")
         f.write("Now the file has more content!")
         f.close()
-        r = self.upload_file("%s.txt" % self.file_name, variables['s3_bucket'])
+        r = self.upload_file("%s.txt" % self.file_name, variables['cf_bucket'])
         os.remove("%s.txt" % self.file_name)
         assert r == True
 

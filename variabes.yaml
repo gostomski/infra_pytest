@@ -1,2 +1,3 @@
-s3_bucket: "miningcity-dev-cf-ota-sharebucket"
+s3_bucket: "miningcity-dev-s3-ota-sharebucket"
+cf_bucket: "miningcity-dev-cf-ota-sharebucket"
 cloudfront_url: "https://d6t1j28na93p9.cloudfront.net"
